@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindAR Image Target</title>
+    <style>
+        body{
+            position: relative;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .ar-example{
+            height: 1080px;
+            width: 1920px;
+            visibility: hidden;
+            font-size: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: red;
+        }
+        .vid-container {
+            width: 1080px;
+            height: 608px; /* Adjust the height of the embedded YouTube video */
+            position: relative;
+            margin-top: 1200px;
+        }
+        .controls {
+            position: absolute;
+            top: calc(50% - 600px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            z-index: 10;
+        }
+        .control img {
+            width: 300px;
+            height: auto;
+            cursor: pointer;
+            margin: 0 20px;
+        }
+        .middle-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+        }
+        .middle-image img {
+            width: 1080px;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="ar-example" id="ar-example">
+        <div class="vid-container">
+            <iframe id="youtube-video" width="1080" height="608"
+                src="https://www.youtube.com/embed/aLxDoq6Mpmc?autoplay=1" 
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+            </iframe>
+    
+        </div>
+
+        <div class="middle-image">
+            <img src="../../assets/images/Käyntikortti.png" alt="middle image">
+        </div>
+
+        <div class="controls" id="control">
+            <div class="control play" id="play">
+                <a href="https://www.youtube.com/@itstraeny3203" target="_blank">
+                    <img src="../../assets/images/youtubeIcon.png" alt="youtube">
+                </a>
+            </div>
+            <div class="control pause" id="pause">
+                <a href="https://www.instagram.com/tipi_nami/" target="_blank">
+                    <img src="../../assets/images/instagramIcon.png" alt="instagram">
+                </a>
+            </div>
+            <div class="control stop" id="stop">
+                <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin" target="_blank">
+                    <img src="../../assets/images/linkedinIcon.webp" alt="linkedin">
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="../../libs/mindar/mindar-image-three.prod.js"></script>
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>
