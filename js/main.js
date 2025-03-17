@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     async function startAR() {
         const mindArThreejs = new window.MINDAR.IMAGE.MindARThree({
             container: document.body,
-            imageTargetSrc: "/assets/targets/bisnesscard.mind"
+            imageTargetSrc: "../assets/targets/bisnesscard.mind"
         });
         const { cssRenderer, renderer, cssScene, scene, camera } = mindArThreejs;
 
