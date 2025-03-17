@@ -1,4 +1,4 @@
-import { CSS3DObject } from 'https://cdn.jsdelivr.net/npm/three@0.132.0/examples/jsm/renderers/CSS3DRenderer.js';
+import { CSS3DObject } from "./js/CSS3DRenderer.js";
 
 
 
